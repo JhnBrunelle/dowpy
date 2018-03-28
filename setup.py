@@ -9,4 +9,6 @@ setup(name='dowpy',
       license='MIT',
       packages=['dowpy'],
       install_requires=['requests'],
+      test_suite='nose.collector',
+      tests_require=['nose'],
       zip_safe=False)
