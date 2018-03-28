@@ -8,4 +8,5 @@ setup(name='dowpy',
       author_email='devjohnb@gmail.com',
       license='MIT',
       packages=['dowpy'],
+      install_requires=['requests'],
       zip_safe=False)
