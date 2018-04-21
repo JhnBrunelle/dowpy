@@ -21,7 +21,7 @@ To install DowPy, Use pip:
 .. code-block:: bash
 
     $ pip install dowpy
-    🍰✨
+
 
 Usage
 -----
