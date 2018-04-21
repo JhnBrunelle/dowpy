@@ -9,7 +9,7 @@ except IOError:
 
 setup(name='DowPy',
       version='0.1.5',
-      description='Module for downloading HTTP(s) files efficiently',
+      description='Module for downloading files over HTTP(s) efficiently',
       url='http://github.com/jhnbrunelle/dowpy',
       author='JohnBrunelle',
       author_email='devjohnb@gmail.com',
