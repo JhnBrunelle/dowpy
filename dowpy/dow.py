@@ -13,10 +13,25 @@ class _Dow:
 
 
     # Default
-    def __init__(self, url):
+    def __init__(self):
+
+        # Downloader Basics
         self.url = ""
         self.chunks = 0
-        self.data = {}
+        self.writeLocation = ""
+        self.hash = ""
+        self.status = "Initialized"
+        self.fileName = self.url.split('/')[-1]
+
+        # Data Storage
+        self.data = {}      # Storing in memory
+
+        # Benchmarking
+        self.startTime = ""
+        self.endTime = ""
+        self.elapsed = ""
+
+        #
 
     # Creates a range based on the number of splits
     def createRange(self, value, numsplits):
@@ -46,10 +61,21 @@ class _Dow:
                 print("Error retrying chunk %d, terminating program" % byteIndex)
             else:
                 print("[!] Error downloading chunk %d, retrying download.." % byteIndex)
-                downloadChunk(url, byteIndex, byteRange, True)
+                self.downloadChunk(url, byteIndex, byteRange, True)
 
         end = time.time()
         print("\b\b - Complete: chunk %d took %s seconds to download" % (byteIndex, end - start))
+
+    # Start a download
+    def start(self):
+        self.status="Downloading"
+
+        start_time = time.time()
+
+        # Check if valid URL
+        if self.url == "":
+            self.status = "Failed: No URL (how did you get here?)"
+            return
 
 
 # Single download, 1 chunk
@@ -59,6 +85,7 @@ class SingleDow(_Dow):
     def __init__(self, url=""):
         self.url = url
         self.chunks = 1
+
 
 
 
