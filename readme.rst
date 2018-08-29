@@ -21,7 +21,6 @@ Features
 * Ability to download any file type
 * Multi-threading to run parallel downloads, if supported
 * Resumable downloads on connection loss
-* Informative UI
 * Cross-platform support
 * Timed bench marks of each individual chunk/overall file
 * File verification, via hash check
@@ -39,6 +38,19 @@ To install DowPy, Use pip:
 
 Usage
 -----
+
+.. code-block:: python
+
+   url = "https://gph.to/2BTy5xU
+
+   # To create a single thread download
+   dow1 = SingleDow(url)
+
+   # To create a multi threaded download with 3 parallel downloads
+   dow2 = MultiDow(url, 3)
+
+   # To start the download
+   dow1.start()
 
 Documentation
 -------------
