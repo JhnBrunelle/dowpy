@@ -54,20 +54,30 @@ Usage
 
 Documentation
 -------------
-Each Download Object has the following properties:
+The following properties can be set BEFORE download has been started:
 
 +----------------+--------+---------------------------------------------------------------------------------+
 | prop           | type   | Desc                                                                            |
 +================+========+=================================================================================+
+| .url           | string | The direct url to the file to request                                           |
++----------------+--------+---------------------------------------------------------------------------------+
 | .chunks        | int    | The # of parallel threads to download the file with (MultiDow only)             |
 +----------------+--------+---------------------------------------------------------------------------------+
 | .writeLocation | string | File location to download the file                                              |
 +----------------+--------+---------------------------------------------------------------------------------+
-| .status        | string | Returns the current status of the download (initialized, downloading, complete) |
-+----------------+--------+---------------------------------------------------------------------------------+
 | .fileName      | string | Name of the downloaded file                                                     |
 +----------------+--------+---------------------------------------------------------------------------------+
 | .hash          | string | Known hash to test the file with                                                |
++----------------+--------+---------------------------------------------------------------------------------+
+
+
+
+The following properties return information about the download:
+
++----------------+--------+---------------------------------------------------------------------------------+
+| prop           | type   | Desc                                                                            |
++================+========+=================================================================================+
+| .status        | string | Returns the current status of the download (initialized, downloading, complete) |
 +----------------+--------+---------------------------------------------------------------------------------+
 | .sizeInBytes   | string | Returns the size of the file in bytes                                           |
 +----------------+--------+---------------------------------------------------------------------------------+
