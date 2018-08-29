@@ -41,7 +41,7 @@ Usage
 
 .. code-block:: python
 
-   url = "https://gph.to/2BTy5xU
+   url = "https://gph.to/2BTy5xU"
 
    # To create a single thread download
    dow1 = SingleDow(url)
@@ -54,3 +54,26 @@ Usage
 
 Documentation
 -------------
+Each Download Object has the following properties:
+
++----------------+--------+---------------------------------------------------------------------------------+
+| prop           | type   | Desc                                                                            |
++================+========+=================================================================================+
+| .chunks        | int    | The # of parallel threads to download the file with (MultiDow only)             |
++----------------+--------+---------------------------------------------------------------------------------+
+| .writeLocation | string | File location to download the file                                              |
++----------------+--------+---------------------------------------------------------------------------------+
+| .status        | string | Returns the current status of the download (initialized, downloading, complete) |
++----------------+--------+---------------------------------------------------------------------------------+
+| .fileName      | string | Name of the downloaded file                                                     |
++----------------+--------+---------------------------------------------------------------------------------+
+| .hash          | string | Known hash to test the file with                                                |
++----------------+--------+---------------------------------------------------------------------------------+
+| .sizeInBytes   | string | Returns the size of the file in bytes                                           |
++----------------+--------+---------------------------------------------------------------------------------+
+| .startTime     | string | Start time of the download                                                      |
++----------------+--------+---------------------------------------------------------------------------------+
+| .endTime       | string | End time of the download                                                        |
++----------------+--------+---------------------------------------------------------------------------------+
+| .elapsedTime   | String | Total time of download                                                          |
++----------------+--------+---------------------------------------------------------------------------------+
