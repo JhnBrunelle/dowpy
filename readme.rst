@@ -54,7 +54,7 @@ Usage
 
 Documentation
 -------------
-The following properties can be set BEFORE download has been started:
+The following properties can be set BEFORE the download has started:
 
 +----------------+--------+---------------------------------------------------------------------------------+
 | prop           | type   | Desc                                                                            |
